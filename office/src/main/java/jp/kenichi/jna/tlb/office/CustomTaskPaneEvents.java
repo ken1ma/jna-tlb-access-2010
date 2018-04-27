@@ -1,0 +1,34 @@
+
+package jp.kenichi.jna.tlb.office;
+
+import com.sun.jna.platform.win32.COM.util.annotation.ComInterface;
+import com.sun.jna.platform.win32.COM.util.annotation.ComMethod;
+import com.sun.jna.platform.win32.COM.util.annotation.ComProperty;
+import com.sun.jna.platform.win32.COM.util.IDispatch;
+import com.sun.jna.platform.win32.COM.util.IUnknown;
+import com.sun.jna.platform.win32.COM.util.IRawDispatchHandle;
+import com.sun.jna.platform.win32.Variant.VARIANT;
+
+/**
+ * <p>uuid({8A64A872-FC6B-4D4A-926E-3A3689562C1C})</p>
+ */
+@ComInterface(iid="{8A64A872-FC6B-4D4A-926E-3A3689562C1C}")
+public interface CustomTaskPaneEvents extends IUnknown, IRawDispatchHandle, IDispatch {
+    /**
+     * <p>id(0x1)</p>
+     * <p>vtableId(7)</p>
+     * @param CustomTaskPaneInst [in] {@code _CustomTaskPane}
+     */
+    @ComMethod(name = "VisibleStateChange", dispId = 0x1)
+    void VisibleStateChange(_CustomTaskPane CustomTaskPaneInst);
+            
+    /**
+     * <p>id(0x2)</p>
+     * <p>vtableId(8)</p>
+     * @param CustomTaskPaneInst [in] {@code _CustomTaskPane}
+     */
+    @ComMethod(name = "DockPositionStateChange", dispId = 0x2)
+    void DockPositionStateChange(_CustomTaskPane CustomTaskPaneInst);
+            
+    
+}
