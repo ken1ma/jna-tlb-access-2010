@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>jp.kenichi.jna.tlb</groupId>
+		<artifactId>parent</artifactId>
+		<version>0.1</version>
+	</parent>
+
+	<groupId>jp.kenichi.jna.tlb</groupId>
+	<artifactId>acedao</artifactId>
+	<version>12.0.0</version>
+	<packaging>jar</packaging>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>eu.doppel_helix.jna.tlbcodegenerator</groupId>
+				<artifactId>TlbCodeGenerator</artifactId>
+				<version>1.0-SNAPSHOT</version>
+				<configuration>
+					<!--<guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</guid>--> <!-- this results in ライブラリは登録されていません。(HRESULT: 8002801d) (puArgErr=) -->
+					<file>C:\Program Files\Common Files\Microsoft Shared\OFFICE14\ACEDAO.DLL</file> <!-- Microsoft Office 14.0 Access database engine Object library -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
